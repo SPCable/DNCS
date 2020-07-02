@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Main</class>
+ <widget class="QMainWindow" name="Main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>847</width>
+    <height>410</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Phần mềm điểm danh by@team2</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="head" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>-30</y>
+      <width>1019</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="Source.qrc">:/newPrefix/Images/background.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDS">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>60</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Black</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string> Danh sách lớp học</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>C:/Users/nnhat/Downloads/enterprise.png</normaloff>C:/Users/nnhat/Downloads/enterprise.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnLS">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>120</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Black</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string> Lịch sử điểm danh</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>C:/Users/nnhat/Downloads/paper.png</normaloff>C:/Users/nnhat/Downloads/paper.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSetting">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>240</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Black</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string> Hệ thống</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>C:/Users/nnhat/Downloads/support.png</normaloff>C:/Users/nnhat/Downloads/support.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnHD">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>180</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Black</family>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string> Hướng dẫn</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>C:/Users/nnhat/Downloads/file.png</normaloff>C:/Users/nnhat/Downloads/file.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>12</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>:/newPrefix/C:/Users/nnhat/Downloads/menu.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Delete">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>100</y>
+      <width>58</width>
+      <height>58</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="pixmap">
+     <pixmap>C:/Users/nnhat/Downloads/cancel.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>250</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>C:/Users/nnhat/Downloads/left (3).png</normaloff>C:/Users/nnhat/Downloads/left (3).png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoRepeat">
+     <bool>true</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>false</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>0</y>
+      <width>211</width>
+      <height>58</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDangNhap_2">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>300</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:#371f57; color: white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDangNhap_3">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>300</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:#371f57; color: white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDangNhap_4">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>300</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:#371f57; color: white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>80</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>150</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>50</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ten lop</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>120</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>ten mon hoc</string>
+    </property>
+   </widget>
+   <widget class="QListView" name="listView">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>0</y>
+      <width>301</width>
+      <height>291</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>head</class>
+   <extends>QLabel</extends>
+   <header>head.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="Source.qrc"/>
+ </resources>
+ <connections/>
+</ui>

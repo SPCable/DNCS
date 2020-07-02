@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>Images/plus.png</file>
+    <file>Images/background.jpg</file>
+    <file>Images/face_detection@2x.png</file>
+    <file>Images/Logo_Hutech.jpg</file>
+  </qresource>
+  <qresource prefix="newPrefix"/>
+</RCC>

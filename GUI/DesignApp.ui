@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormLogin</class>
+ <widget class="QWidget" name="FormLogin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Phần mềm điểm danh by@team2</string>
+  </property>
+  <widget class="QLabel" name="Background">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>850</width>
+     <height>450</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Source.qrc">:/newPrefix/Images/background.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LogoQA">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>434</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Source.qrc">:/newPrefix/Images/face_detection@2x.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Logo_Hutech">
+   <property name="geometry">
+    <rect>
+     <x>495</x>
+     <y>0</y>
+     <width>321</width>
+     <height>103</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Source.qrc">:/newPrefix/Images/Logo_Hutech.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>541</x>
+     <y>158</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sitka Banner</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;</string>
+   </property>
+   <property name="text">
+    <string>Tài khoản:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>541</x>
+     <y>209</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sitka Banner</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;</string>
+   </property>
+   <property name="text">
+    <string>Mật khẩu:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnDangNhap">
+   <property name="geometry">
+    <rect>
+     <x>575</x>
+     <y>309</y>
+     <width>160</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:#371f57; color: white;</string>
+   </property>
+   <property name="text">
+    <string>Đăng nhập</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>548</x>
+     <y>180</y>
+     <width>214</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>548</x>
+     <y>230</y>
+     <width>214</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Source.qrc"/>
+  <include location="Source.qrc"/>
+ </resources>
+ <connections/>
+</ui>
