@@ -5,6 +5,9 @@ from CLL import *
 from FromSV import Ui_From
 import sys
 from NhanDien import *
+import pandas as pd
+import random
+from pandas import DataFrame
 
 class Ui_Main(object):
     def setup(self, Main):
@@ -229,6 +232,53 @@ class Ui_Main(object):
         self.btnDD.setStyleSheet("color: white; background-color: #371f57;")
         self.btnDD.setObjectName("btnDD")
 
+        self.widget4 = QtWidgets.QWidget(self.centralwidget)
+        self.widget4.setGeometry(QtCore.QRect(232, 58, 670, 492))
+        self.widget4.setEnabled(True)
+        self.widget4.setObjectName("widget4")
+        self.widget4.hide()
+
+        self.ListH = QtWidgets.QTableWidget(self.widget4)
+        self.ListH.setGeometry(QtCore.QRect(0,0,680,400))
+        self.ListH.setObjectName("ListH")
+        self.ListH.setStyleSheet("color: black")
+        self.ListH.setColumnCount(5)
+        self.ListH.setAlternatingRowColors(True)
+        self.ListH.setHorizontalHeaderLabels(("Mã lớp","Tên lớp","Môn Học","Sỉ số","Vắng"))
+        self.ListH.horizontalHeader().setCascadingSectionResizes(False)
+        self.ListH.horizontalHeader().setSortIndicatorShown(False)
+        self.ListH.horizontalHeader().setStretchLastSection(True)
+        self.ListH.verticalHeader().setVisible(False)
+        self.ListH.verticalHeader().setCascadingSectionResizes(False)
+        self.ListH.verticalHeader().setStretchLastSection(False)
+        self.ListH.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
+        self.ListH.setSelectionBehavior(QAbstractItemView.SelectRows)
+
+        self.btnhis = QtWidgets.QPushButton(self.widget4)
+        self.btnhis.setGeometry(40,420,160,50)
+        self.btnhis.setText("Xem chi tiết")
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(11)
+        font.setBold(True)
+        self.btnhis.setFont(font)
+        self.btnhis.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnhis.setStyleSheet("color: white; background-color: #371f57;")
+        self.btnhis.setObjectName("btnDD")
+
+        self.btnex = QtWidgets.QPushButton(self.widget4)
+        self.btnex.setGeometry(450,420,160,50)
+        self.btnex.setText("Xuất Excel")
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(11)
+        font.setBold(True)
+        self.btnex.setFont(font)
+        self.btnex.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnex.setStyleSheet("color: white; background-color: #371f57;")
+        self.btnex.setObjectName("btnDD")
+
+
         font_info = QtGui.QFont()
         font_info.setFamily("MS Shell Dlg 2")
         font_info.setPointSize(11)
@@ -252,18 +302,6 @@ class Ui_Main(object):
         self.label3.setFont(font_info)
         self.label3.setStyleSheet("color: white")
 
-        self.label6 = QtWidgets.QLabel(self.box_info)
-        self.label6.setText("Trạng Thái:")
-        self.label6.setGeometry(10,180,120,30)
-        self.label6.setFont(font_info)
-        self.label6.setStyleSheet("color: white")
-
-        self.label7 = QtWidgets.QLabel(self.box_info)
-        self.label7.setText("Vắng:")
-        self.label7.setGeometry(10,230,120,30)
-        self.label7.setFont(font_info)
-        self.label7.setStyleSheet("color: white")
-
         self.label10 = QtWidgets.QLabel(self.box_info)
         self.label10.setText("Trống")
         self.label10.setGeometry(140,30,120,30)
@@ -273,33 +311,19 @@ class Ui_Main(object):
 
         self.label11 = QtWidgets.QLabel(self.box_info)
         self.label11.setText("Trống")
-        self.label11.setGeometry(140,80,120,30)
+        self.label11.setGeometry(130,80,120,30)
         self.label11.setFont(font_info)
         self.label11.setStyleSheet("color: white")
         self.label11.setObjectName("subject")
 
         self.label12 = QtWidgets.QLabel(self.box_info)
         self.label12.setText("Trống")
-        self.label12.setGeometry(140,130,120,30)
+        self.label12.setGeometry(130,130,120,30)
         self.label12.setFont(font_info)
         self.label12.setStyleSheet("color: white")
         self.label12.setObjectName("number")
 
-        self.label13 = QtWidgets.QLabel(self.box_info)
-        self.label13.setText("Trống")
-        self.label13.setGeometry(140,180,120,30)
-        self.label13.setFont(font_info)
-        self.label13.setStyleSheet("color: white")
-        self.label13.setObjectName("status")
 
-        self.label14 = QtWidgets.QLabel(self.box_info)
-        self.label14.setGeometry(140,230,120,30)
-        self.label14.setFont(font_info)
-        self.label14.setStyleSheet("color: white")
-        self.label14.setObjectName("absent")
-        self.label14.setText("Trống")
-
-        
         self.label.raise_()
         self.label_5.raise_()
         self.menuBox2.raise_()
@@ -312,6 +336,7 @@ class Ui_Main(object):
         self.widget1.raise_()  
         self.widget2.raise_()
         self.widget3.raise_()
+        self.widget4.raise_()
         self.btnDD.raise_()  
         self.btnLeft.raise_() 
         Main.setCentralWidget(self.centralwidget)
@@ -339,6 +364,8 @@ class Ui_Main(object):
         self.ListClass.itemSelectionChanged.connect(self.selectionChanged)
         self.ListClass.itemDoubleClicked.connect(self.MoFormSinhVien)
         self.btnDD.clicked.connect(self.DiemDanh)
+        self.btnex.clicked.connect(self.Click_btnLS)
+
         self.f = 0
     def Click_Left(self):
         if self.f == 0:
@@ -350,7 +377,9 @@ class Ui_Main(object):
             self.btnThoat.setGeometry(QtCore.QRect(0, 180, 65, 61))
             self.widget2.setGeometry(QtCore.QRect(65, 58, 881, 492))
             self.ListClass.setGeometry(QtCore.QRect(0,0,620,492))
+            self.ListH.setGeometry(QtCore.QRect(0,0,680,400))
             self.widget3.setGeometry(QtCore.QRect(620, 0, 750, 492))
+            self.widget4.setGeometry(QtCore.QRect(65, 58, 880, 492))
 
             self.btnDS.setText("")
             self.btnLS.setText("")
@@ -366,14 +395,14 @@ class Ui_Main(object):
             self.widget2.setGeometry(QtCore.QRect(232, 58, 670, 492))
             self.ListClass.setGeometry(QtCore.QRect(0,0,430,492))
             self.widget3.setGeometry(QtCore.QRect(430, 0, 241, 492))
-
+            self.widget4.setGeometry(QtCore.QRect(232, 58, 670, 492))
+            self.ListH.setGeometry(QtCore.QRect(0,0,700,400))
 
             self.btnDS.setText(" Danh sách lớp học")
             self.btnLS.setText(" Lịch sử điểm danh")
             self.btnThoat.setText(" Thoát")
             self.f = 0
     # event de xu ly cac button:
-#chua xong
     def MoFormSinhVien(self):
         row_number = self.ListClass.currentRow()
         self.newform = QtWidgets.QMainWindow()
@@ -393,12 +422,14 @@ class Ui_Main(object):
     def Click_btnDS(self):
         self.widget1.show()
         self.widget2.show()
+        self.widget4.hide()
         self.XoaDS()
         self.Hienthilop()
 
     def Click_btnLS(self):
         self.widget1.hide()
         self.widget2.hide()
+        self.widget4.show()
 
     def Click_btnHD(self):
         self.widget1.hide()

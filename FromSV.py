@@ -232,9 +232,9 @@ class Ui_From(object):
     def retranslateUi(self, From):
         _translate = QtCore.QCoreApplication.translate
         From.setWindowTitle(_translate("From", "Quản lý sinh viên "))
-        self.groupBox.setTitle(_translate("From", "Thông tin sinh viên::"))
-        self.label_2.setText(_translate("From", "Họ và tên::"))
-        self.label_3.setText(_translate("From", "MSSV::"))
+        self.groupBox.setTitle(_translate("From", "Thông tin sinh viên:"))
+        self.label_2.setText(_translate("From", "Họ và tên:"))
+        self.label_3.setText(_translate("From", "MSSV:"))
         self.label_6.setText(_translate("From", "Giới tính:"))
         self.pushButton.setText(_translate("From", "SCAN"))
         self.pushButton_2.setText(_translate("From", "REFRESH"))
@@ -247,14 +247,11 @@ class Ui_From(object):
         self.groupBox_2.setTitle(_translate("From", "Student List:"))
 
     def SaveAndTrain(self):
-        self.form = QMainWindow()
-        self.label_anima=QtWidgets.QLabel(self.form)
-        self.movie = QtGui.QMovie('image/loading.gif')
-        self.label_anima.setMovie(self.movie)
-        self.movie.start()
-        self.form.show()
+        self.groupBox.setEnabled(False)
+        self.groupBox_2.setEnabled(False)
         train.trainning(self.nameFolder)
-        print("Da Training xong")
+        self.groupBox.setEnabled(True)
+        self.groupBox_2.setEnabled(True)
 
     def DocHinhAnh(self, mssv, ten, row_number):
         demfile = 0

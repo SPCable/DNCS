@@ -13,7 +13,7 @@ class UI_NhanDien(QMainWindow):
 
     def __init__(self, name):
         super(UI_NhanDien,self).__init__()
-        uic.loadUi("form3.ui",self)
+        uic.loadUi("Form3.ui",self)
         self.path =  name
         print(self.path)
         self.btnXuat = self.findChild(QPushButton,"btnXuat")
